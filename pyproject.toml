@@ -1,0 +1,21 @@
+[project]
+name = "awn-splunk-soar-mcp"
+version = "0.1.0"
+description = "Read-only MCP server for Splunk SOAR (playbooks, containers, artifacts, runs)"
+readme = "README.md"
+authors = [
+    { name = "Daniel Munoz", email = "daniel.munoz@arcticwolf.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]<2",
+    "requests>=2.34.2",
+    "truststore>=0.10.4",
+]
+
+[project.scripts]
+awn-splunk-soar-mcp = "awn_splunk_soar_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
